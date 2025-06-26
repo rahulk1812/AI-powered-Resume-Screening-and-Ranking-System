@@ -1,0 +1,1 @@
+HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, Git, GitHub, REST API, JSON, Bootstrap, Tailwind CSS, jQuery, Figma, UI Design, UX Design, Responsive Design, Cross-browser Compatibility, Web Performance Optimization, Web Security,Agile Methodology, Debugging, Deployment, Netlify, Vercel, Firebase, Authentication, Web Hosting, SEO Basics, MVC Architecture
