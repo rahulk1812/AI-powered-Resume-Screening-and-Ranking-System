@@ -75,7 +75,7 @@ streamlit run app.py
 
 ## 🧑‍💻 Author
 
-    Made with ❤️ by Prakash Sharma 
+    Made with ❤️ by Rahul Kumar
 
 ---
 
