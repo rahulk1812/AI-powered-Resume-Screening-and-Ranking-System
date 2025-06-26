@@ -1,7 +1,7 @@
 # 📄 AI Resume Screener using NLP
 
 This is a simple yet powerful AI-driven web application that helps screen resumes against a job description using Natural Language Processing (NLP). It calculates a match score, highlights potential resume improvements, and supports batch upload of multiple PDFs.
-▶️ **[Live App on Streamlit](https://resume-screener-nlp-ljsgckfxeberaybxpbg2a8.streamlit.app/)**
+▶️ 
 ---
 
 ## 🔍 Features
