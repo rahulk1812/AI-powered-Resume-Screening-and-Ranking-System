@@ -2,7 +2,7 @@
 
 This is a simple yet powerful AI-driven web application that helps screen resumes against a job description using Natural Language Processing (NLP). It calculates a match score, highlights potential resume improvements, and supports batch upload of multiple PDFs.
 
-▶️ **https://ai-powered-resume-screening-and-ranking-systemgit-rahul.streamlit.app/**
+▶️ https://rahul-ai-powered-resume-screening-and-ranking-system.streamlit.app/
 ---
 
 ## 🔍 Features
