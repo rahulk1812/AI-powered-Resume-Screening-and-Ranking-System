@@ -6,7 +6,7 @@ from utils import (
     clean_text,
     calculate_similarity,
     extract_email,
-    extract_name   # ✅ replaced wrong "extrse" with "extract_name"
+    extract_name   # ✅ fixed wrong import (was extrse before)
 )
 
 # 🛠️ Page Config
