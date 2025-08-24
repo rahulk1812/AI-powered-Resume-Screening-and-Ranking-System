@@ -26,17 +26,29 @@ def clean_text(text):
     text = text.lower()
     text = re.sub(r'\n', ' ', text)
     text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
-    # Basic clean — optional advanced cleaning below
-    # tokens = text.split()
-    # filtered_tokens = [stemmer.stem(word) for word in tokens if word not in stop_words]
-    # return ' '.join(filtered_tokens)
     return text
 
 def calculate_similarity(resume_text, jd_text):
+    """
+    Calculates similarity between resume and job description using a hybrid method:
+    - 60% weight to cosine similarity (TF-IDF)
+    - 40% weight to keyword match percentage
+    """
+
+    # Step 1: Cosine similarity
     vectorizer = TfidfVectorizer()
     vectors = vectorizer.fit_transform([resume_text, jd_text])
-    score = cosine_similarity(vectors[0:1], vectors[1:2])
-    return round(float(score[0][0]) * 100, 2)  # in %
+    cosine_score = float(cosine_similarity(vectors[0:1], vectors[1:2])[0][0]) * 100
+
+    # Step 2: Keyword match percentage
+    jd_keywords = set(jd_text.split())
+    resume_words = set(resume_text.split())
+    matched_keywords = jd_keywords.intersection(resume_words)
+    keyword_match_percentage = (len(matched_keywords) / len(jd_keywords)) * 100 if jd_keywords else 0
+
+    # Step 3: Weighted final score
+    final_score = (0.6 * cosine_score) + (0.4 * keyword_match_percentage)
+    return round(final_score, 2)
 
 def extract_email(text):
     match = re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', text)
