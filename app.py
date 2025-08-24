@@ -6,7 +6,7 @@ from utils import (
     clean_text,
     calculate_similarity,
     extract_email,
-    extract_name
+    extrse
 )
 
 # 🛠️ Page Config
@@ -16,7 +16,23 @@ st.set_page_config(page_title="Resume Screener", layout="wide")
 with st.sidebar:
     st.title("🔧 Options")
     st.markdown("Built with ❤️ using NLP & Streamlit")
-    st.markdown("[GitHub Repo](https://github.com/rahulk1812)")
+    
+
+    # ✏️ Change Job Description
+    st.subheader("✏️ Edit Job Description")
+    try:
+        with open("job_description.txt", "r", encoding='utf-8') as f:
+            current_jd = f.read()
+    except FileNotFoundError:
+        current_jd = ""
+
+    new_jd = st.text_area("Job Description", value=current_jd, height=200)
+
+    if st.button("💾 Save Job Description"):
+        with open("job_description.txt", "w", encoding='utf-8') as f:
+            f.write(new_jd)
+        st.success("✅ Job description updated successfully!")
+        st.rerun()  # Updated for latest Streamlit
 
 # 🧠 Title and Header Image
 st.title("📄 AI Resume Screener using NLP")
