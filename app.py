@@ -6,7 +6,7 @@ from utils import (
     clean_text,
     calculate_similarity,
     extract_email,
-    extrse
+    extract_name   # ✅ replaced wrong "extrse" with "extract_name"
 )
 
 # 🛠️ Page Config
@@ -17,7 +17,6 @@ with st.sidebar:
     st.title("🔧 Options")
     st.markdown("Built with ❤️ using NLP & Streamlit")
     
-
     # ✏️ Change Job Description
     st.subheader("✏️ Edit Job Description")
     try:
@@ -36,7 +35,10 @@ with st.sidebar:
 
 # 🧠 Title and Header Image
 st.title("📄 AI Resume Screener using NLP")
-st.image("assets/header.png", use_container_width=True)
+
+# Load header image if available
+if os.path.exists("assets/header.png"):
+    st.image("assets/header.png", use_container_width=True)
 
 # 📋 Description
 st.markdown("""
