@@ -1,5 +1,11 @@
 # 📄 AI Resume Screener using NLP
 
+<img width="1918" height="788" alt="image" src="https://github.com/user-attachments/assets/5f731c5d-79c2-4eba-afb4-6a51f9762d95" /> 
+
+<img width="1916" height="801" alt="image" src="https://github.com/user-attachments/assets/535351f3-a859-4fc4-88fb-d9ac35c5b309" />
+
+
+
 This is a simple yet powerful AI-driven web application that helps screen resumes against a job description using Natural Language Processing (NLP). It calculates a match score, highlights potential resume improvements, and supports batch upload of multiple PDFs.
 
 ▶️ https://rahul-ai-powered-resume-screening-and-ranking-system.streamlit.app/
